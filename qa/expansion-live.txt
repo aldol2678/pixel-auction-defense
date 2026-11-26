@@ -1,0 +1,66 @@
+lobby [(0, 1), (1, 1), (2, 1), (3, 1)]
+start auction None
+wave 1 auction core 60
+preview 1 thunder
+bid 1 ['reveal', 'auction', 'auction', 'auction']
+first auction {'wave': 1, 'key': 'frostgolem', 'bids': [17, 16, 0, 0], 'outcome': {'type': 'sold', 'winner': 0, 'price': 17}}
+wave 1 battle core 60
+upgrade [None, 'ok', 'ok', 'ok']
+wave 1 waveend core 60
+wave 2 auction core 60
+preview 2 toad
+bid 2 ['auction', 'auction', 'reveal', 'auction']
+wave 2 battle core 60
+upgrade [None, 'ok', None, 'ok']
+wave 2 waveend core 60
+wave 3 auction core 60
+preview 3 firemage
+bid 3 ['auction', 'auction', 'reveal', 'auction']
+wave 3 battle core 60
+upgrade ['ok', None, 'ok', None]
+wave 3 waveend core 60
+wave 4 auction core 60
+preview 4 lavagolem
+bid 4 ['auction', 'reveal', 'auction', 'auction']
+wave 4 battle core 60
+upgrade [None, None, 'ok', None]
+wave 5 auction core 60
+preview 5 cannoneer
+bid 5 ['auction', 'auction', 'auction', 'reveal']
+wave 5 battle core 60
+upgrade ['ok', 'ok', None, 'ok']
+wave 5 waveend core 55
+wave 6 auction core 55
+preview 6 archer
+bid 6 ['reveal', 'auction', 'auction', 'auction']
+wave 6 battle core 55
+upgrade [None, 'ok', None, 'ok']
+wave 6 waveend core 55
+wave 7 auction core 55
+preview 7 drone
+bid 7 ['reveal', 'auction', 'auction', 'auction']
+wave 7 battle core 55
+upgrade [None, None, None, None]
+wave 7 waveend core 55
+wave 8 auction core 55
+preview 8 paladin
+bid 8 ['auction', 'auction', 'reveal', 'auction']
+wave 8 battle core 55
+upgrade [None, None, 'ok', None]
+wave 8 waveend core 55
+wave 9 auction core 55
+preview 9 frostmage
+bid 9 ['auction', 'auction', 'auction', 'reveal']
+wave 9 battle core 55
+upgrade [None, 'ok', None, 'ok']
+wave 9 waveend core 55
+wave 10 auction core 55
+preview 10 None
+bid 10 ['auction', 'auction', 'auction', 'reveal']
+wave 10 battle core 55
+upgrade ['ok', 'ok', None, 'ok']
+wave 10 result core 50
+FINAL 10 50 [29, 35, 48, 37] 10
+forecast matches 9
+4 same seats, 3/4 wait, 4/4 start, 60 core, 30G each, empty history PASS
+LIVE REMATCH PASS 4 same seats, 3/4 wait, 4/4 start, 60 core, 30G each, empty history, old bid refused

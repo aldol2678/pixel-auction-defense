@@ -1,0 +1,5 @@
+Equipment taps, actual equip, swap preview/cancel, unequip, both concentric radii 116 → 144 PASS
+관문 기록 · W5 코어 −2 · 동문 −2 four gate details/mobile width PASS
+Wave selection and survival reset PASS
+Equipment taps, actual equip, swap preview/cancel, unequip, both concentric radii 116 → 144 PASS
+관문 기록 · W5 코어 −2 · 동문 −2 four gate details/mobile width PASS

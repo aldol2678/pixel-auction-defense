@@ -1,0 +1,1 @@
+Dashed effective attack range on unit selection. Cloudflare version 6e68bb6d-3bec-4a08-bfd5-8938091457cd. Desktop pointer and mobile touch, survival/coop, offline/online, spectator and team inspection. Local synergy radius 116 -> 131. Baseline browser checks 43/43.

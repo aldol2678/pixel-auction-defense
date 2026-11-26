@@ -1,0 +1,35 @@
+survival: one-lot forecast for 10 waves, secret bids, split once, distinct IDs, telegraph/dash with slow, rematch quorum and reset PASS
+coop: one-lot forecast for 10 waves, secret bids, split once, distinct IDs, telegraph/dash with slow, rematch quorum and reset PASS
+runner-up tie, sole bidder, unsold, pass, pre-boss hints PASS
+W5 four gates, former HP 842 new combined HP 756 single reward PASS
+W10 four gates, former HP 1415 new combined HP 1272 single reward PASS
+W15 four gates, former HP 1664 new combined HP 1496 single reward PASS
+W20 four gates, former HP 1913 new combined HP 1720 single reward PASS
+All escapes: 4 total damage, no augment. All kills: one offer per player; pooled summons PASS
+coop market settlement, gear swap/sale, range, relic ownership, boss kill/leak, choice, timeout, final guard and rematch PASS
+survival market settlement, gear swap/sale, range, relic ownership, boss kill/leak, choice, timeout, final guard and rematch PASS
+128 seeded decks, 15 units, 4 gear, 3 relics PASS
+Six traits: income, range/rate, per-wave shield, elemental mark, workshop armor and caster counter PASS
+coop 10 20 [ [ 14, 43 ], [ 14, 25 ], [ 14, 33 ], [ 14, 28 ] ]
+survival 10 0 [ [ 7, 81 ], [ 0, 26 ], [ 0, 52 ], [ 0, 30 ] ]
+survival pass, place, merge, full board refund, 3-star, shared field thresholds, projection vs settlement PASS
+coop pass, place, merge, full board refund, 3-star, shared field thresholds, projection vs settlement PASS
+Gate leaks, shields, overkill, duplicate and post-loss leaks, boss, offspring, checkpoint, settled and legacy history PASS
+Both modes: private unit previews equal real combat stats on equip, swap and unequip with stars, relics, traits and augments PASS
+actual slot 2 avg first shot (s), leaks 4.40 3.29
+actual slot 3 avg first shot (s), leaks 6.46 4.00
+actual slot 4 avg first shot (s), leaks 5.91 1.25
+actual slot 7 avg first shot (s), leaks 10.74 0.79
+equal-travel-time slot 2 avg first shot (s), leaks 4.08 3.92
+equal-travel-time slot 3 avg first shot (s), leaks 6.25 4.00
+equal-travel-time slot 4 avg first shot (s), leaks 5.45 1.25
+equal-travel-time slot 7 avg first shot (s), leaks 10.04 1.92
+Fork and gate geometry, spawn forecast, boss summons and W6 trials PASS
+Wave HP for all enemies and modes, legacy HP, eliminated bot and merge preview PASS
+New/legacy lengths, rematch, all forecasts, 6/2/2 per chapter, four distinct augments, checkpoints, shields, final summons and haste PASS
+coop [{"wave":20,"won":true,"augs":[20],"history":20},{"wave":20,"won":true,"augs":[5,20],"history":20},{"wave":20,"won":true,"augs":[],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[20],"history":20},{"wave":20,"won":true,"augs":[5,15,20],"history":20}]
+survival [{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20}]
+new routes survival [{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20}]
+new routes coop [{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20}]
+Four-gate release coop [{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20}]
+Four-gate release survival [{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20}]

@@ -1,0 +1,13 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#191727"><title>친구와 플레이 · 픽셀 경매 디펜스</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="online.css"><link rel="stylesheet" href="kit.css"></head>
+<body><main id="onlineLobby"><header><a draggable="false" href="/">← 픽셀 경매 디펜스</a><div><span id="network"></span> <button id="lobbySound" aria-pressed="true">소리 켜짐</button></div></header>
+<section id="entry"><div class="hero"><canvas id="crest" width="160" height="52" aria-hidden="true"></canvas><h1>친구와 플레이</h1><p>네 명의 비밀 경매로 20웨이브를 방어해.</p></div>
+<label class="nickname-field">닉네임 <input id="roomNickname" type="text" placeholder="플레이어" autocomplete="nickname" maxlength="24"></label><div class="columns"><article><h2>새 방 만들기</h2><label for="mode">방어 방식</label><select id="mode"><option value="survival">서바이벌 · 각자 라인 방어</option><option value="coop">협력 · 하나의 코어 방어</option></select><button id="create" class="primary">방 만들기</button></article>
+<article><h2>친구 방 참가</h2><label for="code">네 자리 방 코드</label><input id="code" maxlength="4" placeholder="A7K2" autocomplete="off" autocapitalize="characters" spellcheck="false"><button id="join">참가하기</button></article></div></section>
+<section id="room" hidden><div class="roomhead"><div><small id="modeName"></small><h1 id="roomTitle">대기실</h1></div><button id="copy" title="방 코드 복사"><span id="roomCode"></span> <img src="/icons/copy.svg" width="15" height="15" alt=""></button></div>
+<div id="roster" class="roster"></div><section id="lobby" class="panel"><p id="lobbyHint"></p><button id="start" class="primary">게임 시작</button></section>
+<button id="leave" class="btn ghost">방 나가기</button></section></main>
+<!-- MATCH -->
+<p id="message" role="status"></p>
+<script src="/js/art.js"></script><script src="/js/data.js"></script><script src="/js/sound.js"></script><script src="/js/placement.js"></script>
+<script src="/js/loadout.js"></script>
+<script src="/js/auction-ui.js"></script><script src="/js/online.js"></script></body></html>

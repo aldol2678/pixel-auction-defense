@@ -1,0 +1,3 @@
+Game text selection update, 2026-11-25 KST
+Worker 614296a3-d492-416c-ba81-4279dafe9810
+Mobile Chromium mouse drag and CDP touch long-press on title, unit, online entry and lot descriptions produced no text selection. Code replacement, price editing, bid increment, bid confirmation and touch scrolling passed. Production browser checked both game routes.

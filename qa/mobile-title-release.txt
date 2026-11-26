@@ -1,0 +1,4 @@
+Mobile title and SVG update, 2026-11-25 KST
+https://pixel-auction.aldol.app/
+Worker version 5ae10e31-4dae-4dee-8062-545d69cf4b06
+Hosted Chromium 390x720: title, both mode controls, room entry and help fully visible and hit-tested. Help opened; both game modes started; online entry returned 200; mode and faction images decoded.

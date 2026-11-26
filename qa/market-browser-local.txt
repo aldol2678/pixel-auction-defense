@@ -1,0 +1,2 @@
+Mobile 360px: 3 auction kinds, icon artwork, equip +28, relic +14, new unit, both 3-choice boss dialogs, two distinct selections, page width PASS
+Online mobile room start, private inventory, lot preview, shared distinct traits PASS

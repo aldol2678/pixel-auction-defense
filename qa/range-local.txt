@@ -1,0 +1,4 @@
+local survival solo opponent and own archer rings; click
+local coop solo teammate/opponent and own archer rings; tap
+local survival online opponent and own archer rings; click
+local coop online teammate/opponent and own archer rings; tap

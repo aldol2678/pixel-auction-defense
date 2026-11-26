@@ -1,0 +1,4 @@
+coop market settlement, gear swap/sale, range, relic ownership, boss kill/leak, choice, timeout, final guard and rematch PASS
+survival market settlement, gear swap/sale, range, relic ownership, boss kill/leak, choice, timeout, final guard and rematch PASS
+128 seeded decks, 15 units, 4 gear, 3 relics PASS
+Six traits: income, range/rate, per-wave shield, elemental mark, workshop armor and caster counter PASS

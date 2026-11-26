@@ -1,0 +1,4 @@
+local survival solo 5G draft, candidate ring, second candidate, cancel, confirm move PASS
+local coop solo 5G draft, candidate ring, second candidate, cancel, confirm move PASS
+local survival online 5G draft, candidate ring, second candidate, cancel, confirm move PASS
+local coop online 5G draft, candidate ring, second candidate, cancel, confirm move PASS

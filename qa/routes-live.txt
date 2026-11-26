@@ -1,0 +1,5 @@
+W14 no scroll 360 740 697
+W14 no scroll 390 700 695
+W14 no scroll 320 568 563
+Inspect, unequip, equip, replace/return, team details and bid PASS
+Online route room, 24 posts, visible wave and troop spawn PASS

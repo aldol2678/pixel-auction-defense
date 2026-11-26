@@ -1,0 +1,1 @@
+Production 4d8d5ae0-998d-488b-a3b4-ce478e13b03e. Protocol 4: four concurrent co-op gate bosses, five-second pre-auction, same match shell for bot and room play. See gates-* QA.

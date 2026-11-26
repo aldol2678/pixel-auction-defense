@@ -1,0 +1,4 @@
+Pixel Auction Defense, 2026-11-25 KST
+Cloudflare Worker 80e52de9-7159-4080-870f-da9417921f40
+Next lot forecast, runner-up and margin, wave 5 split and wave 10 charge bosses, same-room rematches.
+Local browser 43/43; responsive screens 6/6. Real production four-seat coop: 10 waves, 9 forecasts, same seats and room after all four ready, round and history reset.

@@ -1,0 +1,228 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#191727"><title>친구와 플레이 · 픽셀 경매 디펜스</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="online.css"><link rel="stylesheet" href="kit.css"></head>
+<body><main id="onlineLobby"><header><a draggable="false" href="/">← 픽셀 경매 디펜스</a><div><span id="network"></span> <button id="lobbySound" aria-pressed="true">소리 켜짐</button></div></header>
+<section id="entry"><div class="hero"><canvas id="crest" width="160" height="52" aria-hidden="true"></canvas><h1>친구와 플레이</h1><p>네 명의 비밀 경매로 20웨이브를 방어해.</p></div>
+<label class="nickname-field">닉네임 <input id="roomNickname" type="text" placeholder="플레이어" autocomplete="nickname" maxlength="24"></label><div class="columns"><article><h2>새 방 만들기</h2><label for="mode">방어 방식</label><select id="mode"><option value="survival">서바이벌 · 각자 라인 방어</option><option value="coop">협력 · 하나의 코어 방어</option></select><button id="create" class="primary">방 만들기</button></article>
+<article><h2>친구 방 참가</h2><label for="code">네 자리 방 코드</label><input id="code" maxlength="4" placeholder="A7K2" autocomplete="off" autocapitalize="characters" spellcheck="false"><button id="join">참가하기</button></article></div></section>
+<section id="room" hidden><div class="roomhead"><div><small id="modeName"></small><h1 id="roomTitle">대기실</h1></div><button id="copy" title="방 코드 복사"><span id="roomCode"></span> <img src="/icons/copy.svg" width="15" height="15" alt=""></button></div>
+<div id="roster" class="roster"></div><section id="lobby" class="panel"><p id="lobbyHint"></p><button id="start" class="primary">게임 시작</button></section>
+<button id="leave" class="btn ghost">방 나가기</button></section></main>
+<div id="app" hidden>
+
+  <header id="hud">
+    <div class="hud-group">
+      <div class="chip"><span class="chip-k">WAVE</span><b id="waveNum">1</b><span class="chip-s">/20</span></div>
+      <div class="chip gold"><img class="ui-icon" src="icons/coin.svg" width="14" height="14" alt=""><b id="goldNum">30</b><span class="chip-s">G</span></div>
+      <div class="chip life"><img id="lifeIcon" class="ui-icon" src="icons/heart.svg" width="14" height="14" alt=""><b id="lifeNum">12</b></div>
+      <div class="chip kills" title="내 처치 수"><img class="ui-icon" src="icons/skull.svg" width="14" height="14" alt="내 처치 수"><b id="myKills">–</b></div>
+    </div>
+    <div class="hud-mode" id="modeLabel">대기 중</div>
+    <div class="hud-group right">
+      <button class="icon-btn" id="btnSpeed" title="배속 전환">×1</button>
+      <button class="icon-btn" id="btnSound" title="효과음" aria-label="효과음" aria-pressed="true"><img class="ui-icon" src="icons/volume.svg" width="16" height="16" alt=""></button>
+      <button class="icon-btn" id="btnMenu" aria-label="메뉴" aria-haspopup="dialog" aria-controls="menuLayer" aria-expanded="false" title="메뉴"><img class="ui-icon" src="icons/menu.svg" width="16" height="16" alt=""></button>
+    </div>
+  </header>
+
+  <main id="boardWrap">
+    <canvas id="cv" width="780" height="520"></canvas>
+    <div id="toastLayer"></div>
+
+    <!-- 동시 오픈 연출 -->
+    <div id="revealLayer" class="layer hidden">
+      <div class="reveal-inner">
+        <div class="reveal-title">입찰 공개<span class="dots">...</span></div>
+        <div class="bid-cards" id="bidCards"></div>
+        <div class="reveal-outcome" id="revealOutcome"></div>
+      </div>
+    </div>
+
+    <!-- 타이틀 -->
+    <div id="titleLayer" class="layer">
+      <div class="title-inner">
+        <canvas id="titleParty" width="136" height="24" aria-hidden="true"></canvas>
+        <div class="logo-sub">PIXEL AUCTION DEFENSE</div>
+        <h1 class="logo">픽셀 경매<br><span>디펜스</span></h1>
+        <p class="logo-desc">매 웨이브 <b>유닛·장비·유물 중 하나</b>. 네 명이 <b>비공개 입찰</b>로 낚아채고,<br>같은 값이면 <b>유찰</b>이다. 골드는 이자와 패기의 줄다리기.</p>
+        <label class="nickname-field">닉네임 <input id="nickname" type="text" placeholder="플레이어" autocomplete="nickname" maxlength="24"></label>
+        <div class="mode-btns">
+          <button class="mode-btn" id="btnSurvival">
+            <img class="ui-icon" src="icons/shield.svg" width="32" height="32" alt="">
+            <span class="mb-name">서바이벌</span>
+            <span class="mb-desc">각자 자기 라인 방어<br>최후 생존 승리</span>
+          </button>
+          <button class="mode-btn coop" id="btnCoop">
+            <img class="ui-icon" src="icons/core.svg" width="32" height="32" alt="">
+            <span class="mb-name">협력</span>
+            <span class="mb-desc">중앙 코어 공동 방어<br>기여도 MVP 경쟁</span>
+          </button>
+        </div>
+        <div class="title-foot">
+          <span>나 1명 · 봇 3명</span><span class="dot">·</span><span>20 웨이브</span><span class="dot">·</span><span>동점 = 유찰</span>
+        </div>
+        <div class="title-actions"><a draggable="false" class="room-entry" href="https://pixel-auction.aldol.app/online">친구와 방 코드로 플레이 <img class="ui-icon" src="icons/arrow.svg" width="14" height="14" alt=""></a>
+        <button class="link-btn" id="btnHowto">게임 방법 보기</button></div>
+      </div>
+      <div class="howto hidden" id="howtoBox">
+        <h3>이렇게 한다</h3>
+        <ol>
+          <li><b>경매</b> — 유닛·장비·유물 중 하나가 걸린다. 4명이 동시에 비공개 입찰. 매 경매마다 매물을 5초 동안 확인한 뒤 입찰한다. 봇전 첫 입찰은 15초, 이후와 온라인 입찰은 10초. <b>0G 패스</b>도 가능.</li>
+          <li><b>공개</b> — 시간이 끝나면 네 명의 입찰가가 한꺼번에 열린다. 최고가 <b>동점이면 유찰</b>(골드 반환).</li>
+          <li><b>배치</b> — 낙찰 유닛은 빈 슬롯에 자동 배치. 탭으로 골라 옮기고, 같은 유닛은 <b>자동 합성(★2·★3)</b>.</li>
+          <li><b>디펜스</b> — 웨이브가 몰려온다. 유닛이 알아서 싸운다. 라인이 뚫리면 라이프 −1.</li>
+          <li><b>보상</b> — 장비는 내 유닛 한 기에 장착하고 유물은 낙찰 즉시 적용된다. 5·10·15·20웨이브 보스를 처치하면 증강 3개 중 하나를 고른다. 협력전은 네 관문에서 보스가 한 마리씩 등장하며 첫 처치에 팀원마다 한 번 선택한다. 10·15웨이브를 버티면 방어선이 일부 회복된다.</li>
+          <li><b>경제</b> — 웨이브 생존 +10G, 잔액 이자 10%(최대 +5). 남는 골드는 <b>강화</b>로 쓴다.</li>
+        </ol>
+        <button class="link-btn" id="btnHowtoClose">닫기</button>
+      </div>
+    </div>
+
+    <!-- 결과 -->
+    <div id="resultLayer" class="layer hidden">
+      <div class="result-inner">
+        <div class="result-kicker" id="resultKicker">GAME SET</div>
+        <h2 id="resultTitle">승리!</h2>
+        <p id="finalBoss" class="boss-report" hidden></p>
+        <div id="resultSub" class="result-sub"></div>
+        <table class="rank-table" id="rankTable"></table>
+        <div class="result-btns">
+          <button class="btn primary" id="btnAgain">다시 하기</button>
+          <button class="btn ghost" id="btnHome">타이틀</button>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="menuLayer" aria-labelledby="menuHeading">
+      <div class="menu-inner">
+        <h3 id="menuHeading">메인 메뉴</h3>
+        <button class="btn ghost" id="menuHelp">게임 방법</button>
+        <button class="btn ghost" id="menuSound" aria-pressed="true">효과음 켜짐</button>
+        <button class="btn ghost" id="btnRestart">판 다시 시작</button>
+        <button class="btn ghost" id="btnQuit">타이틀로</button>
+        <button class="btn primary" id="btnResume" autofocus>닫기</button>
+      </div>
+    </dialog>
+  </main>
+
+  <section id="panel">
+<dialog id="traitDialog" aria-labelledby="traitTitle">
+  <header><h2 id="traitTitle"></h2><form method="dialog"><button class="btn tiny" aria-label="시너지 상세 닫기" autofocus>닫기</button></form></header>
+  <div id="traitBody"></div>
+</dialog>
+<dialog id="augmentDialog" aria-labelledby="augTitle"><h2 id="augTitle">보스 처치 · 증강 선택</h2><p>이번 판에 사용할 능력을 하나 골라 줘.</p><div id="augOptions"></div></dialog>
+<details id="gateReport" class="gate-report" hidden>
+  <summary id="gateSummary">관문 피해 기록</summary>
+  <label>웨이브 <select id="gateWave"></select></label>
+  <div id="gateDetails"></div>
+</details>
+<section class="kit" id="loadout" aria-label="장비함" hidden>
+  <div class="kit-bar"><strong id="loadoutTitle">장비함</strong><div class="kit-scroll" id="kitBag"></div><div class="kit-scroll" id="kitUnits" aria-label="착용자"></div><button type="button" id="teamToggle" aria-expanded="false">팀 효과</button></div>
+  <small id="dragHint" hidden>장비를 전장 유닛이나 초상화로 끌어 장착</small>
+  <div class="kit-info" id="kitInfo" hidden></div><div class="kit-info" id="teamInfo" hidden></div>
+</section>
+<div id="placement" class="placement" hidden>
+  <strong class="move-hint" id="moveHint">빈 슬롯을 눌러 이동</strong>
+  <button type="button" id="previewToggle" class="btn tiny" aria-pressed="false">배치 미리보기</button>
+  <span id="previewOptions" hidden>
+    <select id="previewSlot" aria-label="비교할 빈칸"></select>
+    <button type="button" id="previewConfirm" class="btn tiny">이동 확정</button>
+  </span>
+</div>
+    <!-- 경매 패널 -->
+    <div id="auctionPanel" class="panel-body hidden">
+      <div class="auc-top">
+        <div class="unit-card">
+          <canvas id="unitPreview" width="96" height="96"></canvas>
+          <div class="unit-meta">
+            <div class="unit-rarity" id="unitRarity">★</div>
+            <div class="unit-name" id="unitName">도트 궁수</div>
+            <div class="unit-tags">
+              <span class="tag faction" id="unitFaction"><img class="ui-icon" src="icons/nature.svg" width="13" height="13" alt=""><span>자연</span></span>
+              <span class="tag" id="unitCost">가치 8G</span>
+              <span class="tag" id="unitStat">공 6 · 0.55초</span>
+            </div>
+            <div id="lotTraits" class="trait-tags" aria-label="현재 배치 기준 시너지" hidden></div>
+            <div class="unit-desc" id="unitDesc">빠른 단일 공격</div><strong class="lot-advice" id="lotAdvice"></strong>
+          </div>
+        </div>
+        <div class="auc-timer">
+          <div class="timer-num"><b id="timerNum">15</b><span>초</span></div>
+          <div class="timer-bar"><i id="timerFill"></i></div>
+          <div class="auc-hint" id="aucHint">비공개 동시 입찰 중</div>
+        </div>
+      </div>
+
+      <p id="forecast" class="forecast"></p>
+      <div class="bid-dock">
+      <div class="bid-row">
+        <div class="bid-box">
+          <div class="bid-label">내 입찰가</div>
+          <div class="bid-amount"><b id="bidNum">0</b><span>G</span></div>
+          <div class="bid-own">보유 <b id="bidOwn">30</b>G</div>
+        </div>
+        <div class="bid-btns">
+          <button class="btn tiny" data-bid="-10">−10</button>
+          <button class="btn tiny" data-bid="1">+1</button>
+          <button class="btn tiny" data-bid="5">+5</button>
+          <button class="btn tiny" data-bid="10">+10</button>
+          <button class="btn tiny allin" id="btnAllin">올인</button>
+        </div>
+      </div>
+
+      <p id="bidPreview" class="bid-preview" aria-live="polite"></p>
+<div class="action-row">
+        <button class="btn ghost" id="btnPass">0G 패스</button>
+        <button class="btn primary big" id="btnConfirm">입찰 확정<i>Space</i></button>
+      </div>
+      </div>
+      <details class="history">
+        <summary>경매 기록</summary>
+        <div class="h-list" id="histAuction"></div>
+      </details>
+      <div class="rivals">
+        <div class="h-title">라이벌 <span class="h-sub">입찰 눈치용</span></div>
+        <div class="rival-list" id="rivalList"></div>
+      </div>
+    </div>
+
+    <!-- 전투 패널 -->
+    <div id="battlePanel" class="panel-body hidden">
+      <section class="battle-synergy" aria-labelledby="synergyTitle">
+        <header><h2 id="synergyTitle">시너지</h2><span>남은 적 <b id="enemyLeft">0</b></span></header>
+        <div id="synRow"></div>
+      </section>
+      <div id="coopBoard" class="coop-board hidden"></div>
+      <div class="unit-row" id="unitRow"></div>
+      <div class="sel-actions hidden" id="selActions">
+        <div class="sel-name" id="selName">선택 없음</div>
+        <div class="sel-btns">
+          <button class="btn tiny" id="btnUpgrade">강화</button>
+          <button class="btn tiny danger" id="btnSell">판매</button>
+          <button class="btn tiny" id="btnCancelSel">취소</button>
+        </div>
+      </div>
+      <div class="slot-hint" id="slotHint">유닛을 눌러 사거리와 이동할 칸 확인</div>
+      <div class="wave-preview">
+        <div class="h-title">이번 웨이브</div>
+        <div class="wc-list" id="waveComp"></div>
+      </div>
+      <details class="history">
+        <summary>경매 기록</summary>
+        <div class="h-list" id="histBattle"></div>
+      </details>
+      <div class="rivals">
+        <div class="h-title">라이벌</div>
+        <div class="rival-list" id="rivalList2"></div>
+      </div>
+    </div>
+
+    <div id="idlePanel" class="panel-body">
+      <div class="idle-text">경매를 준비하는 중…</div>
+    </div>
+  </section>
+
+</div>
+
+<p id="message" role="status"></p>
+<script src="/js/art.js"></script><script src="/js/data.js"></script><script src="/js/sound.js"></script><script src="/js/placement.js"></script>
+<script src="/js/loadout.js"></script>
+<script src="/js/auction-ui.js"></script><script src="/js/online.js"></script></body></html>

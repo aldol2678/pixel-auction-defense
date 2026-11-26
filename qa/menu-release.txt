@@ -1,0 +1,4 @@
+Mobile hamburger menu fix, 2026-11-25 KST
+https://pixel-auction.aldol.app/
+Worker 95ddebb2-fb97-4efd-adaa-cd75ba6b9c36
+Production Chromium 390x720: hamburger hit test, main dialog, sound toggle, help, close, survival and cooperative pause/resume passed.

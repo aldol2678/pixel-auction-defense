@@ -1,0 +1,1 @@
+Pixel Auction Defense private bid outcome and candidate placement previews. Production version a1baac89-f2b0-458b-98da-bb6b7b556306. Separate unit synergy design in docs.

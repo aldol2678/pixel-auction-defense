@@ -1,0 +1,2 @@
+Gate leaks, shields, overkill, duplicate and post-loss leaks, boss, offspring, checkpoint, settled and legacy history PASS
+Both modes: private unit previews equal real combat stats on equip, swap and unequip with stars, relics, traits and augments PASS

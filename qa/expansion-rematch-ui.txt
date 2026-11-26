@@ -1,0 +1,12 @@
+local runtime ready
+loaded 친구와 플레이 · 픽셀 경매 디펜스
+loaded 친구와 플레이 · 픽셀 경매 디펜스
+create test room
+join
+start
+bidding
+2 mobile contexts, same forecast, reveal: 입찰 동시 공개
+딸기 낙찰 · 30G · 2위 29G · 1G 차이
+
+민트 29G · 딸기 30G · 망고 7G · 소다 19G
+ready/cancel/guest refresh/second vote/new auction in both original seats PASS

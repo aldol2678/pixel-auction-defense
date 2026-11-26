@@ -1,0 +1,5 @@
+survival: one-lot forecast for 10 waves, secret bids, split once, distinct IDs, telegraph/dash with slow, rematch quorum and reset PASS
+coop: one-lot forecast for 10 waves, secret bids, split once, distinct IDs, telegraph/dash with slow, rematch quorum and reset PASS
+runner-up tie, sole bidder, unsold, pass, pre-boss hints PASS
+coop 10 46 [ [ 14, 35 ], [ 14, 25 ], [ 14, 40 ], [ 14, 44 ] ]
+survival 10 0 [ [ 0, 69 ], [ 5, 78 ], [ 5, 78 ], [ 8, 81 ] ]

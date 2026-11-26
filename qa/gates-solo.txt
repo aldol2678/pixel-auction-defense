@@ -1,0 +1,46 @@
+PASS 타이틀 렌더
+PASS 게임 방법 토글
+PASS 서바이벌 경매 진입 — auction
+PASS 시작 골드 30 / 라이프 14 — 30G 14♥
+PASS 빠른 배팅 버튼(+10/+5) — 15
+PASS 빠른 배팅 마이너스 — 5
+PASS 올인 버튼 — 30
+PASS 동시 오픈 연출 진입 — reveal
+PASS 4인 입찰가 동시 공개 — 4
+PASS 공개 후 낙찰/유찰 판정 — {'type': 'sold', 'winner': 1, 'price': 26}
+PASS 전투 진입 — battle
+PASS 웨이브 적 스폰 — 4
+PASS 메뉴 일시정지/재개
+PASS 배속 순환 ×1→×2→×3→×1 — 2
+PASS 음소거 토글
+PASS 내 유닛 슬롯 존재 — [{'x': 326, 'y': 76, 'i': 6}]
+PASS 탭으로 유닛 선택 — 도트 궁수 ★ · 강화 12G
+PASS 강화(★2) 동작 — 30->18
+PASS 빈 슬롯 탭으로 이동 — 1
+PASS 판매(환불) 동작 — units 1->0, gold 18->25
+PASS 웨이브 1 클리어 후 다음 경매 — 2
+PASS 동점 → 유찰 판정 — {'type': 'unsold', 'max': 9, 'tied': [0, 1]}
+PASS 유찰 시 골드 반환(차감 없음) — 30 -> 30
+PASS 유찰 시 유닛 지급 없음 — 1 -> 1
+PASS 유찰 연출 표시 — 유찰!최고가 9G 동점 — 아무도 못 가져간다
+PASS 동점 2명(12G)도 유찰 — {'type': 'unsold', 'max': 12, 'tied': [1, 2]}
+PASS 단독 최고가 낙찰 — {'type': 'sold', 'winner': 1, 'price': 12}
+PASS resolveBids 단위 규칙
+PASS 결과 화면 도달 — 시도 [(20, 'result', 6)]
+PASS 웨이브 20 완주 경로 동작 — 시도 [(20, 'result', 6)]
+PASS 결과 화면 표시 — 살아남았다!
+PASS 협력 모드 경매 진입 — auction
+PASS 협력 코어 라이프 — 60
+PASS 협력 전투 진행 — battle
+PASS 기여도 4인 표시 — 4
+PASS 협력 코어 HP 표시 — 60
+PASS 모바일 가로 오버플로 없음
+PASS 모바일 세로 한 화면
+PASS 모바일 캔버스 표시
+PASS 모바일 전투 화면 — battle
+PASS 콘솔 에러 0건
+PASS 페이지 에러 0건
+PASS 스크린샷 저장
+
+==== SUMMARY ====
+43/43 PASS

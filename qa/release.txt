@@ -1,0 +1,1 @@
+Production f608c7ab-e826-46cc-991a-913bb4305f06. Cooperative gate history and gear stat/range comparison on both UIs. See report-* QA.

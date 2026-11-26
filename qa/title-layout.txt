@@ -1,0 +1,6 @@
+320x568 title / hit test / help / both modes / return PASS
+360x640 title / hit test / help / both modes / return PASS
+390x720 title / hit test / help / both modes / return PASS
+412x780 title / hit test / help / both modes / return PASS
+844x390 title / hit test / help / both modes / return PASS
+1280x860 title / hit test / help / both modes / return PASS

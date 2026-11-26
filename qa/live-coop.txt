@@ -1,0 +1,53 @@
+lobby [(0, 0), (1, 0), (2, 0), (3, 0)]
+start auction None
+wave 1 auction core 60
+bid 1 ['auction', 'auction', 'reveal', 'auction']
+first auction {'wave': 1, 'key': 'frostgolem', 'bids': [13, 13, 0, 0], 'outcome': {'type': 'unsold', 'max': 13, 'tied': [0, 1]}}
+wave 1 battle core 60
+upgrade ['ok', 'ok', 'ok', 'ok']
+wave 2 auction core 60
+bid 2 ['auction', 'reveal', 'auction', 'auction']
+wave 2 battle core 60
+upgrade ['ok', 'ok', None, 'ok']
+wave 2 waveend core 60
+wave 3 auction core 60
+bid 3 ['auction', 'reveal', 'auction', 'auction']
+wave 3 battle core 60
+upgrade [None, None, None, None]
+wave 4 auction core 60
+bid 4 ['reveal', 'auction', 'auction', 'auction']
+wave 4 battle core 60
+upgrade [None, None, 'ok', None]
+wave 4 waveend core 54
+wave 5 auction core 54
+bid 5 ['reveal', 'auction', 'auction', 'auction']
+wave 5 battle core 54
+upgrade ['ok', 'ok', None, 'ok']
+wave 5 waveend core 49
+wave 6 auction core 49
+bid 6 ['reveal', 'auction', 'auction', 'auction']
+wave 6 battle core 49
+upgrade ['ok', 'ok', None, 'ok']
+wave 6 waveend core 49
+wave 7 auction core 49
+bid 7 ['reveal', 'auction', 'auction', 'auction']
+wave 7 battle core 49
+upgrade [None, None, None, None]
+wave 7 waveend core 49
+wave 8 auction core 49
+bid 8 ['reveal', 'auction', 'auction', 'auction']
+wave 8 battle core 49
+upgrade [None, None, 'ok', None]
+wave 8 waveend core 49
+wave 9 auction core 49
+bid 9 ['auction', 'reveal', 'auction', 'auction']
+wave 9 battle core 49
+upgrade [None, 'ok', None, None]
+wave 9 waveend core 49
+wave 10 auction core 49
+bid 10 ['auction', 'auction', 'auction', 'reveal']
+wave 10 battle core 49
+upgrade ['ok', 'ok', None, 'ok']
+wave 10 waveend core 44
+wave 10 result core 44
+FINAL 10 44 [39, 30, 40, 34] 10

@@ -1,0 +1,4 @@
+360px: W1 15s accepts at 11s; W2 10s; focused gear control survives reveal, settlement of new gear, battle and wave end; equip/swap PASS
+W5/W15 boss kill and W10/W20 escape: correct reward dialog, own or shared field message through settlement and results PASS
+Selected unit movement hint rendered on field PASS
+Online new room: 10s auction, per-seat last-boss field, confirm/reveal PASS

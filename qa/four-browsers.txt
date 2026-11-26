@@ -1,0 +1,3 @@
+seats [0, 1, 3, 2]
+reveal [{'seat': 0, 'bids': [14, 14, 0, 0], 'type': 'unsold', 'gold': [30, 30, 30, 30], 'width': 390, 'scroll': 390}, {'seat': 1, 'bids': [14, 14, 0, 0], 'type': 'unsold', 'gold': [30, 30, 30, 30], 'width': 1050, 'scroll': 1050}, {'seat': 3, 'bids': [14, 14, 0, 0], 'type': 'unsold', 'gold': [30, 30, 30, 30], 'width': 390, 'scroll': 390}, {'seat': 2, 'bids': [14, 14, 0, 0], 'type': 'unsold', 'gold': [30, 30, 30, 30], 'width': 1050, 'scroll': 1050}]
+reconnect and watch 3 관전 · 민트 · ♥ 14

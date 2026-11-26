@@ -1,0 +1,70 @@
+lobby [(0, 1), (1, 1), (2, 1), (3, 1)]
+start auction None
+wave 1 auction core 60
+preview 1 spring
+bid 1 ['auction', 'reveal', 'auction', 'auction']
+first auction {'wave': 1, 'key': 'drone', 'bids': [17, 16, 0, 0], 'outcome': {'type': 'sold', 'winner': 0, 'price': 17}}
+wave 1 battle core 60
+upgrade [None, '현재 상태에서 할 수 없는 조작이야.', '현재 상태에서 할 수 없는 조작이야.', '현재 상태에서 할 수 없는 조작이야.']
+wave 2 auction core 60
+preview 2 frostmage
+bid 2 ['auction', 'auction', 'auction', 'reveal']
+wave 2 battle core 60
+equipped spring
+upgrade ['ok', 'ok', '현재 상태에서 할 수 없는 조작이야.', 'ok']
+wave 3 auction core 56
+preview 3 scout
+bid 3 ['reveal', 'auction', 'auction', 'auction']
+wave 3 battle core 56
+upgrade ['ok', 'ok', 'ok', 'ok']
+wave 3 waveend core 56
+wave 4 auction core 56
+preview 4 lens
+bid 4 ['auction', 'reveal', 'auction', 'auction']
+wave 4 battle core 56
+upgrade [None, None, 'ok', 'ok']
+wave 4 waveend core 54
+wave 5 auction core 54
+preview 5 alchemist
+bid 5 ['auction', 'auction', 'auction', 'reveal']
+wave 5 battle core 54
+equipped lens
+upgrade [None, None, None, 'ok']
+wave 5 augment core 54
+chosen 5 ['precision', 'precision', 'pursuit', 'force']
+wave 6 auction core 54
+preview 6 banner
+bid 6 ['auction', 'auction', 'reveal', 'auction']
+wave 6 battle core 54
+upgrade ['ok', None, 'ok', None]
+wave 6 waveend core 52
+wave 7 auction core 52
+preview 7 warden
+bid 7 ['auction', 'reveal', 'auction', 'auction']
+wave 7 battle core 52
+upgrade ['ok', None, 'ok', None]
+wave 7 waveend core 48
+wave 8 auction core 48
+preview 8 compass
+bid 8 ['auction', 'reveal', 'auction', 'auction']
+wave 8 battle core 48
+upgrade [None, None, None, None]
+wave 8 waveend core 44
+wave 9 auction core 44
+preview 9 frostgolem
+bid 9 ['auction', 'auction', 'auction', 'reveal']
+wave 9 battle core 44
+upgrade ['ok', None, None, None]
+wave 9 waveend core 42
+wave 10 auction core 42
+preview 10 None
+bid 10 ['auction', 'auction', 'reveal', 'auction']
+wave 10 battle core 42
+upgrade [None, None, 'ok', None]
+wave 10 waveend core 32
+wave 10 result core 32
+FINAL 10 32 [56, 20, 28, 32] 10
+6 units / 2 equipment / 2 relics confirmed. Final augments: [['precision'], ['precision'], ['pursuit'], ['force']]
+forecast matches 9
+4 same seats, 3/4 wait, 4/4 start, 60 core, 30G each, empty history PASS
+LIVE REMATCH PASS 4 same seats, 3/4 wait, 4/4 start, 60 core, 30G each, empty history, old bid refused

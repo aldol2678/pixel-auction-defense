@@ -1,0 +1,9 @@
+actual slot 2 avg first shot (s), leaks 4.40 3.29
+actual slot 3 avg first shot (s), leaks 6.46 4.00
+actual slot 4 avg first shot (s), leaks 5.91 1.25
+actual slot 7 avg first shot (s), leaks 10.74 0.79
+equal-travel-time slot 2 avg first shot (s), leaks 4.08 3.92
+equal-travel-time slot 3 avg first shot (s), leaks 6.25 4.00
+equal-travel-time slot 4 avg first shot (s), leaks 5.45 1.25
+equal-travel-time slot 7 avg first shot (s), leaks 10.04 1.92
+Fork and gate geometry, spawn forecast, boss summons and W6 trials PASS

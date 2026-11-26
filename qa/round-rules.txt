@@ -1,0 +1,15 @@
+survival: one-lot forecast for 10 waves, secret bids, split once, distinct IDs, telegraph/dash with slow, rematch quorum and reset PASS
+coop: one-lot forecast for 10 waves, secret bids, split once, distinct IDs, telegraph/dash with slow, rematch quorum and reset PASS
+runner-up tie, sole bidder, unsold, pass, pre-boss hints PASS
+coop market settlement, gear swap/sale, range, relic ownership, boss kill/leak, choice, timeout, final guard and rematch PASS
+survival market settlement, gear swap/sale, range, relic ownership, boss kill/leak, choice, timeout, final guard and rematch PASS
+128 seeded decks, 15 units, 4 gear, 3 relics PASS
+Six traits: income, range/rate, per-wave shield, elemental mark, workshop armor and caster counter PASS
+coop 10 20 [ [ 14, 43 ], [ 14, 25 ], [ 14, 33 ], [ 14, 28 ] ]
+survival 10 0 [ [ 7, 81 ], [ 0, 26 ], [ 0, 52 ], [ 0, 30 ] ]
+survival pass, place, merge, full board refund, 3-star, shared field thresholds, projection vs settlement PASS
+coop pass, place, merge, full board refund, 3-star, shared field thresholds, projection vs settlement PASS
+Wave HP for all enemies and modes, legacy HP, eliminated bot and merge preview PASS
+New/legacy lengths, rematch, all forecasts, 6/2/2 per chapter, four distinct augments, checkpoints, shields, final summons and haste PASS
+coop [{"wave":20,"won":true,"augs":[20],"history":20},{"wave":20,"won":true,"augs":[5,20],"history":20},{"wave":20,"won":true,"augs":[],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[20],"history":20},{"wave":20,"won":true,"augs":[5,15,20],"history":20}]
+survival [{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20},{"wave":20,"won":true,"augs":[5,10,15,20],"history":20}]

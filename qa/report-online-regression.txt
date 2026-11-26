@@ -1,0 +1,3 @@
+Two independent clients, W1 prepare lock, 10s bid, same card and dock, private bid 11G/pass, settlement PASS
+Mobile menu and help, four-seat contribution board, select unit, equipment controls; local results/rematch checked in fixture
+Solo five-second preview + full W1 bid, no page errors PASS

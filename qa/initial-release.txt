@@ -1,0 +1,5 @@
+2026-11-25 KST
+https://pixel-auction.aldol.app/
+Cloudflare version 7d1e1591-2cc7-4c61-b159-38e5b67e4555, 100%
+Original ZIP SHA256 28dc0eb115e258e75954023d2f4cfd74c8218bed1ce274234fa37e07e0e899c4
+Four isolated Chromium contexts used the HTTP fallback to talk to production. The WebSocket path was separately exercised from a hosted Chromium session. No physical handset or human listening test.

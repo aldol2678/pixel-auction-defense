@@ -1,0 +1,1 @@
+Production db3d9b95-04d4-4cf9-8f5f-5f3e94dac382. Personal/shared boss outcomes from actual kill/leak events. Stable equipment controls in auction, reveal, battle and wave settlement. First solo auction lasts 15 seconds, further auctions and online rooms use 10. Selected unit shows nearby movement guidance. See round QA evidence.
